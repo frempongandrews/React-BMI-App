@@ -1,18 +1,19 @@
 import React from 'react';
 
 
-
 const App = React.createClass({
 
     handleHeightChange(e) {
-      var height = e.target.value;
-      this.props.onHeightChange(height);
+        var height = e.target.value;
+        this.props.onHeightChange(height);
     },
 
     handleWeightChange (e) {
         var weight = e.target.value;
-      this.props.onWeightChange(weight);
+        this.props.onWeightChange(weight);
+
     },
+
 
     render () {
         return (
@@ -39,8 +40,12 @@ const App = React.createClass({
                     step={this.props.step}
                     onChange={this.handleWeightChange}
 
-                    />
+                />
                 <p>{this.props.weight}</p>
+
+                <p>BMI = {this.props.bmi}</p>
+                <p>BMI CLASS : </p>
+
             </div>
         )
     }

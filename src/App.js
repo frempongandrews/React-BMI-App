@@ -7,10 +7,12 @@ const App = React.createClass({
     getInitialState() {
         return {
             height: 170,
-            weight: 100,
+            weight: 65,
             min: 0,
             max: 245,
             step: 1,
+            bmi: 22.49,
+            bmiClass: "Normal"
         }
     },
 
@@ -27,6 +29,18 @@ const App = React.createClass({
 
     },
 
+    getBMI (height, weight) {
+       height = this.state.height;
+       weight = this.state.weight;
+       var BMI = ((weight/height/height)*10000).toFixed(2) ;
+       this.setState({
+           bmi: BMI
+       },this. getBMIClass(BMI));
+    },
+
+    getBMIClass (bmi) {
+        bmi =this.state.bmi;
+    },
 
     render () {
         console.log(this.state);
@@ -42,6 +56,8 @@ const App = React.createClass({
                     step={this.state.step}
                     height={this.state.height}
                     weight={this.state.weight}
+
+                    bmi={this.state.bmi}
                 />
 
 
