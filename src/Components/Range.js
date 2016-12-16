@@ -24,6 +24,11 @@ const App = React.createClass({
 
     },
 
+    toLbs (num) {
+        var lbs = num/0.45359237;
+        var lbsRounded = Math.floor(lbs);
+        return lbsRounded;
+    },
     render () {
 
         var height = this.props.height;
@@ -32,11 +37,11 @@ const App = React.createClass({
         var bmiClass = this.props.bmiClass;
 
         return (
-            <div>
+            <div className="range">
 
 
                 <div className="height-container">
-                    <p>height</p>
+                    <p>HEIGHT</p>
                     <input
                         type="range"
                         min={this.props.min}
@@ -45,14 +50,14 @@ const App = React.createClass({
                         value={this.props.height}
                         onChange={this.handleHeightChange}
                     />
-                    <span>{height} ({this.toFeet(height)})</span>
+                    <span>{height}cm ({this.toFeet(height)})</span>
                 </div>
 
                 <br />
 
 
                 <div className="weight-container">
-                    <p>weight</p>
+                    <p>WEIGHT</p>
                     <input
                         type="range"
                         min={this.props.min}
@@ -62,10 +67,10 @@ const App = React.createClass({
                         onChange={this.handleWeightChange}
 
                     />
-                    <span>{weight}</span>
+                    <span>{weight}Kg {this.toLbs(weight)} lbs</span>
                 </div>
 
-                <div className="bmi-value-container">
+                <div className="bmi-value-contain">
                     <p>BMI = {bmi}</p>
                 </div>
 

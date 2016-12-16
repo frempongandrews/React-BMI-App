@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Range from './Components/Range';
+import Info from './Components/Info';
 
 
 const App = React.createClass({
@@ -62,8 +63,8 @@ const App = React.createClass({
     render () {
         console.log(this.state);
         return (
-            <div>
-                <h1>BMI APP</h1>
+            <div className="App">
+                <h1 className="App-header">BMI APP</h1>
 
                 <Range
                     onHeightChange={this.onHeightChange}
@@ -77,6 +78,7 @@ const App = React.createClass({
                     bmi={this.state.bmi}
                 />
 
+                <Info data={this.state}/>
 
             </div>
         )

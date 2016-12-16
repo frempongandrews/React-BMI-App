@@ -1,7 +1,167 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+  ==========================================================
+  End reset
+  ==========================================================
+*/
+
+
+body{
+    overflow: hidden;
+    background: linear-gradient(to right, white,#c7b8e4);
+}
 .App {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 550px;
+    margin: 100px auto;
+    border: 4px solid red;
+    background: linear-gradient(to top right,#E95363, #EA6B5D );
+}
+
+.App-header{
+    margin: 40px;
+    border: 2px solid white;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 14px;
 
 }
 
-.height{
+/*
+  ==========================================================
+  Range area
+  ==========================================================
+*/
+
+.range{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+/*
+  ==========================================================
+  Info
+  ==========================================================
+*/
+
+.info{
+    background-color: aliceblue;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    font-size: 12px;
+}
+
+
+
+.info-sections-container{
+    display: flex;
+}
+
+.bmi-value-container{
+    border: 1px solid red;
+    flex: 1 1;
+    position: relative;
+    margin-top: 15px;
+    height: 120px;
+}
+
+.bmi-value-container>span{
+    position: absolute;
+    left: 10px;
+    font-size: 12px;
+}
+
+.bmi-value-container p{
+    margin: 10px 10px;
+}
+
+.bmi-value-container p:not(.bmi-class) {
+    font-size: 13px;
+}
+
+.bmi-value{
+    margin-top: 10px;
+    font-size: 30px;
+    color: #E95363;
+    margin-left: 10px;
+    font-weight: 200;
+    border: 1px solid tomato;
+    width: 80px;
+
+    text-align: center;
+    position: relative;
 
 }
+
+.bmi-info-tables{
+    flex: 1 1;
+    margin-top: 15px;
+    transform: translateY(30px);
+}
+
+
+
+.further-info{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+
+}
+
