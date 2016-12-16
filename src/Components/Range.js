@@ -14,37 +14,64 @@ const App = React.createClass({
 
     },
 
+    //unit conversion functions
+
+    toFeet (num) {
+        var feet = (num * 0.393700) / 12;
+        var roundedFeet = Math.floor(feet);
+        var inches = Math.round((feet - roundedFeet) * 12);
+        return roundedFeet + "'" + inches;
+
+    },
 
     render () {
+
+        var height = this.props.height;
+        var weight = this.props.weight;
+        var bmi = this.props.bmi;
+        var bmiClass = this.props.bmiClass;
+
         return (
             <div>
 
-                <label>height</label>
-                <input
-                    type="range"
-                    min={this.props.min}
-                    max={this.props.max}
-                    step={this.props.step}
-                    value={this.props.height}
-                    onChange={this.handleHeightChange}
-                />
-                <p>{this.props.height}</p>
+
+                <div className="height-container">
+                    <p>height</p>
+                    <input
+                        type="range"
+                        min={this.props.min}
+                        max={this.props.max}
+                        step={this.props.step}
+                        value={this.props.height}
+                        onChange={this.handleHeightChange}
+                    />
+                    <span>{height} ({this.toFeet(height)})</span>
+                </div>
 
                 <br />
 
-                <label>weight</label>
-                <input
-                    type="range"
-                    min={this.props.min}
-                    max={this.props.max}
-                    step={this.props.step}
-                    onChange={this.handleWeightChange}
 
-                />
-                <p>{this.props.weight}</p>
+                <div className="weight-container">
+                    <p>weight</p>
+                    <input
+                        type="range"
+                        min={this.props.min}
+                        max={this.props.max}
+                        step={this.props.step}
+                        value={weight}
+                        onChange={this.handleWeightChange}
 
-                <p>BMI = {this.props.bmi}</p>
-                <p>BMI CLASS : </p>
+                    />
+                    <span>{weight}</span>
+                </div>
+
+                <div className="bmi-value-container">
+                    <p>BMI = {bmi}</p>
+                </div>
+
+                <div className="bmi-class-container">
+                    <p>BMI CLASS : {bmiClass}</p>
+                </div>
 
             </div>
         )

@@ -19,13 +19,13 @@ const App = React.createClass({
     onHeightChange (height) {
       this.setState({
           height:height
-      });
+      }, this.getBMI);
     },
 
     onWeightChange (weight) {
             this.setState({
                 weight:weight
-            });
+            }, this.getBMI);
 
     },
 
@@ -34,12 +34,29 @@ const App = React.createClass({
        weight = this.state.weight;
        var BMI = ((weight/height/height)*10000).toFixed(2) ;
        this.setState({
-           bmi: BMI
-       },this. getBMIClass(BMI));
+           bmi: BMI,
+           bmiClass: this.getBMIClass(BMI)
+       });
     },
 
     getBMIClass (bmi) {
         bmi =this.state.bmi;
+
+        if (bmi < 18.5) {
+            return "Underweight";
+        }
+
+        if (bmi >= 18.5 && bmi <= 24.9) {
+            return "Normal";
+        }
+
+        if (bmi >= 25 && bmi <= 29.9) {
+            return "Overweight";
+        }
+
+        if (bmi >= 30) {
+            return "Obese";
+        }
     },
 
     render () {
@@ -51,12 +68,12 @@ const App = React.createClass({
                 <Range
                     onHeightChange={this.onHeightChange}
                     onWeightChange={this.onWeightChange}
+                    bmiClass={this.state.bmiClass}
                     min={this.state.min}
                     max={this.state.max}
                     step={this.state.step}
                     height={this.state.height}
                     weight={this.state.weight}
-
                     bmi={this.state.bmi}
                 />
 
