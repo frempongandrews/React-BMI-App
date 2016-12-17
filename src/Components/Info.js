@@ -21,12 +21,12 @@ const Info = React.createClass({
                     </div>
 
                     <div className="bmi-info-tables">
-                        <p> The BMI tables
+                      <a href="https://en.wikipedia.org/wiki/Body_mass_index#cite_ref-25" target="_blank">  <p> The BMI tables
                             <br />
 
-                                <span className="bmi-info-arrow"> arrow </span>
+                                <span className="bmi-info-arrow">&#8594;</span>
 
-                        </p>
+                      </p> </a>
                     </div>
 
                 </div>
