@@ -107,6 +107,8 @@ body {
 
 .height-container {
     position: relative;
+
+
 }
 
 .weight-container {
@@ -117,16 +119,16 @@ body {
 .height-value, .weight-value {
     position: absolute;
     font-size: 12px;
-    left: 40%;
+    left: 39%;
     top: 26px;
     background: rgba(255, 255, 255, 0.4);
     padding: 5px;
-    border-bottom: none
+    border-bottom: 0px solid transparent;
 
     /*border-radius: 50%;*/
 }
 
-.height-value:before{
+.height-value:before, .weight-value:before{
     content: "";
     /*width: 30px;*/
     /*height: 30px;*/
@@ -134,16 +136,16 @@ body {
     position: absolute;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
-    border-top: 10px solid rgba(255, 255, 255, 0.3);
+    border-top: 10px solid rgba(255, 255, 255, 0.4);
     border-bottom: 10px solid transparent;
     top: 20px;
     right: 35%;
 }
 
+
 .slider {
     width: 80%;
     margin-left: 30px;
-
 }
 
 /*
