@@ -23,7 +23,9 @@ const Info = React.createClass({
                     <div className="bmi-info-tables">
                         <p> The BMI tables
                             <br />
-                            <span className="bmi-info-arrow"> arrow </span>
+
+                                <span className="bmi-info-arrow"> arrow </span>
+
                         </p>
                     </div>
 

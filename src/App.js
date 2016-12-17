@@ -64,6 +64,7 @@ const App = React.createClass({
         console.log(this.state);
         return (
             <div className="App">
+                {this.props.children}
                 <h1 className="App-header">BMI APP</h1>
 
                 <Range
