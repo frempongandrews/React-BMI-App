@@ -1,5 +1,3 @@
-
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -24,31 +22,37 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 
 /*
   ==========================================================
@@ -56,26 +60,27 @@ table {
   ==========================================================
 */
 
-
-body{
+body {
     overflow: hidden;
-    background: linear-gradient(to right, white,#c7b8e4);
+    background: linear-gradient(to right, white, #c7b8e4);
 
 }
+
 .App {
+    box-sizing: border-box;
     position: relative;
     overflow: hidden;
     width: 350px;
     height: 550px;
     margin: 100px auto;
     border: 4px solid red;
-    background: linear-gradient(to top right,#E95363, #EA6B5D );
+    background: linear-gradient(to top right, #E95363, #EA6B5D);
     /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.App-header{
-    margin: 40px;
+.App-header {
+    margin: 30px;
     /*border: 2px solid white;*/
     text-align: center;
     color: #ffffff;
@@ -90,11 +95,56 @@ body{
   ==========================================================
 */
 
-.range{
+.range {
     color: #ffffff;
     font-size: 14px;
 }
 
+.height-container p, .weight-container p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.height-container {
+    position: relative;
+}
+
+.weight-container {
+    margin-top: 50px;
+    position: relative;
+}
+
+.height-value, .weight-value {
+    position: absolute;
+    font-size: 12px;
+    left: 40%;
+    top: 26px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    border-bottom: none
+
+    /*border-radius: 50%;*/
+}
+
+.height-value:before{
+    content: "";
+    /*width: 30px;*/
+    /*height: 30px;*/
+    /*background-color: aqua;*/
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 10px solid transparent;
+    top: 20px;
+    right: 35%;
+}
+
+.slider {
+    width: 80%;
+    margin-left: 30px;
+
+}
 
 /*
   ==========================================================
@@ -102,7 +152,7 @@ body{
   ==========================================================
 */
 
-.info{
+.info {
     background-color: aliceblue;
     position: absolute;
     width: 100%;
@@ -111,13 +161,11 @@ body{
     font-size: 12px;
 }
 
-
-
-.info-sections-container{
+.info-sections-container {
     display: flex;
 }
 
-.bmi-value-container{
+.bmi-value-container {
     /*border: 1px solid red;*/
     flex: 1 1;
     position: relative;
@@ -125,18 +173,17 @@ body{
     height: 120px;
 }
 
-.bmi-value-container>span{
+.bmi-value-container > span {
     position: absolute;
     left: 15px;
     font-size: 12px;
 }
 
-
 .bmi-value-container p:not(.bmi-class) {
     font-size: 13px;
 }
 
-.bmi-value{
+.bmi-value {
     margin: 10px;
     font-size: 30px;
     color: #E95363;
@@ -148,11 +195,11 @@ body{
 
 }
 
-.bmi-class{
+.bmi-class {
     margin-left: 15px;
 }
 
-.bmi-class span{
+.bmi-class span {
     color: #E95363;
     font-size: 16px;
     font-weight: 400;
@@ -160,20 +207,18 @@ body{
     top: 5px;
 }
 
-.bmi-sentence{
+.bmi-sentence {
     margin: 20px 15px;
 }
 
-.bmi-info-tables{
+.bmi-info-tables {
     flex: 1 1;
     margin-top: 65px;
     transform: translateX(25px);
 
 }
 
-
-
-.further-info{
+.further-info {
     position: absolute;
     bottom: 30px;
     left: 15px;
