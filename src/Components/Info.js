@@ -13,13 +13,15 @@ const Info = React.createClass({
                     <div className="bmi-value-container">
                         <span>YOUR BMI</span> <br />
                         <h2 className="bmi-value"><span>{bmi}</span></h2>
-                        <p className="bmi-class">BMI CLASS: {bmiClass}</p>
+                        <p className="bmi-class">BMI CLASS: <br />
+                            <span> {bmiClass} </span>
+                        </p>
 
-                        <p>Sentence based on class</p>
+                        <p className="bmi-sentence">Sentence based on class</p>
                     </div>
 
                     <div className="bmi-info-tables">
-                        <p> For BMI tables click here
+                        <p> The BMI tables
                             <br />
                             <span className="bmi-info-arrow"> arrow </span>
                         </p>
