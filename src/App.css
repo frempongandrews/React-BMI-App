@@ -183,13 +183,13 @@ input[type=range]::-webkit-slider-runnable-track {
     border: 0.2px solid transparent;
 }
 
-.height-container input::-webkit-slider-thumb:before {
-    content: "";
-    width: 300px;
-    height: 10px;
-    position: absolute;
-    background-color: green;
-}
+/*.height-container input::-webkit-slider-thumb:before {*/
+    /*content: "";*/
+    /*width: 300px;*/
+    /*height: 10px;*/
+    /*position: absolute;*/
+    /*background-color: green;*/
+/*}*/
 
 /*
   ==========================================================
