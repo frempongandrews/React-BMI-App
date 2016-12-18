@@ -17,7 +17,7 @@ const Info = React.createClass({
                             <span> {bmiClass} </span>
                         </p>
 
-                        <p className="bmi-sentence">Sentence based on class</p>
+                        <p className="bmi-sentence">Sentence based on class to be made</p>
                     </div>
 
                     <div className="bmi-info-tables">
