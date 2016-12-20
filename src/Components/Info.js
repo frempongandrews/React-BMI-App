@@ -1,12 +1,27 @@
 import React from 'react';
 
 const Info = React.createClass({
+    resultFeedback (classBMI) {
+        classBMI = this.props.data.bmiClass;
+        switch (classBMI) {
+            case "Normal" : return "Great job!";
+                break;
+
+            case "Overweight" : return "You may start to consider going on a diet";
+                break;
+
+            case "Obese" : return "Search for a diet, now!";
+                break;
+
+            case "Underweight" : return "Why are you not eating??";
+                break;
+        }
+    },
     render () {
         var bmi = this.props.data.bmi;
         var bmiClass = this.props.data.bmiClass;
 
         // 1.TODO: sentence based on bmi class
-
         return (
             <div className="info">
                 <div className="info-sections-container">
@@ -17,7 +32,7 @@ const Info = React.createClass({
                             <span> {bmiClass} </span>
                         </p>
 
-                        <p className="bmi-sentence">Sentence based on class to be made</p>
+                        <p className="bmi-sentence">{this.resultFeedback()}</p>
                     </div>
 
                     <div className="bmi-info-tables">
@@ -31,7 +46,10 @@ const Info = React.createClass({
 
                 </div>
 
-                <p className="further-info"> Details go here</p>
+                <p className="further-info"> Body mass index, or BMI, is used to determine
+                    whether you are in a healthy weight range for your height.
+                </p>
+
             </div>
         )
     }

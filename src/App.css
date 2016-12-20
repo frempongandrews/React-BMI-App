@@ -277,8 +277,14 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .further-info {
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     left: 15px;
+    text-align: center;
+    font-size: 12px;
+    width: 85%;
+    opacity: 0.6;
 
 }
+
+
 
