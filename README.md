@@ -3,7 +3,7 @@ Calculations are realtime as values of height and weight change
 
 Demo:
 
-http://cool-body-mass-index-calculator.netlify.com/
+https://react-cool-bmi-calculator.netlify.com/
 
 
 The body mass index (BMI) or Quetelet index is a value derived from the
